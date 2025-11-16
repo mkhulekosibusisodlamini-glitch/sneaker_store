@@ -23,12 +23,19 @@ header {
   z-index: 10;
 }
 
-.logo {
-  font-size: 1.8em;
+.brand img {
+  width: 150px;      /* fixed width */
+  height: 80px;      /* fixed height */
+  object-fit: contain; /* keeps original logo aspect ratio */
+  transition: 0.3s;
+  cursor: pointer;
+  background: white; /* optional: helps logos pop if transparent */
+  padding: 5px;      /* optional: spacing inside the box */
+  border-radius: 6px; /* optional: rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional: subtle shadow */
 }
 
-.logo span {
-  color: #ff3b3b;
+
 }
 
 nav a {
@@ -215,3 +222,4 @@ footer {
     gap: 10px;
   }
 }
+
