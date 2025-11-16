@@ -13,9 +13,21 @@
   <nav>
     <a href="index.html">Home</a>
   </nav>
+  <div class="cart">🛒 <span id="cart-count">0</span></div>
 </header>
 
 <a href="index.html#brands" class="back-btn">← Back to Brands</a>
+
+<!-- Search + Filter -->
+<div class="search-filter-bar">
+  <input id="searchInput" onkeyup="searchProducts()" placeholder="Search Adidas...">
+  <select id="priceFilter" onchange="filterPrice()">
+    <option value="all">All Prices</option>
+    <option value="low">Below R120</option>
+    <option value="mid">R120 - R150</option>
+    <option value="high">Above R150</option>
+  </select>
+</div>
 
 <section class="shop-section">
   <h2>Adidas Sneakers</h2>
@@ -25,22 +37,27 @@
       <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f" alt="Adidas Ultraboost">
       <h3>Adidas Ultraboost</h3>
       <p>R160</p>
-      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="addToCart('Adidas Ultraboost', 160, this.previousElementSibling.src)">Add to Cart</button>
     </div>
 
     <div class="product">
       <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Adidas NMD">
       <h3>Adidas NMD</h3>
       <p>R140</p>
-      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="addToCart('Adidas NMD', 140, this.previousElementSibling.src)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Adidas Gazelle">
+      <h3>Adidas Gazelle</h3>
+      <p>R120</p>
+      <button onclick="addToCart('Adidas Gazelle', 120, this.previousElementSibling.src)">Add to Cart</button>
     </div>
 
   </div>
 </section>
 
-<footer>
-  <p>© 2025 SneakerHub | All rights reserved.</p>
-</footer>
+<footer><p>© 2025 SneakerHub | All rights reserved.</p></footer>
 
 <script src="script.js"></script>
 </body>
